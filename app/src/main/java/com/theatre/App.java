@@ -1,3 +1,4 @@
+package com.theatre;
 /*Городское управление культуры предложило ученикам (10000 учеников во всех школах) приобрести билеты на любые
  из 10 спектаклей городского театра. Каждый ученик получил право приобрести по одному билету на каждый спектакль,
  но не обязан приобретать билет на все спектакли.
@@ -8,14 +9,13 @@
 • самый популярный спектакль (следует учесть вариант, что может быть несколько таких спектаклей);
 • спектакль (спектакли), на который решили приобрести билеты*/
 
-package main.java;
+import entities.Perfomance;
+import entities.Student;
+import entities.TicketCount;
+import enums.PerfomanceName;
+import service.TheatreService;
 
 import java.util.List;
-import main.java.entities.Perfomance;
-import main.java.entities.Student;
-import main.java.entities.TicketCount;
-import main.java.enums.PerfomanceName;
-import main.java.service.TheatreService;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -26,25 +26,26 @@ public class App
     private static List<Perfomance> choices;
 
     public static void main(String[] args) {
-        List<Student> students = new ArrayList<>();
-        for (int i = 0; i < NUMBER_STUDENTS; i++) {
-            students.add(new Student(choices));
-        }
+            List<Student> students = new ArrayList<>();
+            for (int i = 0; i < NUMBER_STUDENTS; i++) {
+                students.add(new Student(choices));
+            }
 
-        TheatreService theatreService = new TheatreService();
-        List<TicketCount> ticketsCount = theatreService.getCountTicketsForPerfomance(students);
-
-
-        System.out.println("Perfomances with tickets count: \n");
-        ticketsCount.forEach(System.out::println);
-
-        printMostPopularPerformances(theatreService, ticketsCount);
+            TheatreService theatreService = new TheatreService();
+            List<TicketCount> ticketsCount = theatreService.getCountTicketsForPerfomance(students);
 
 
-        System.out.println("\nPerfomances, in which tickets was purchased: \n");
-        List<PerfomanceName> purchasedPerfomance = theatreService.getPurchasedPerfomances(students);
-        purchasedPerfomance.forEach(System.out::println);
+            System.out.println("Perfomances with tickets count: \n");
+            ticketsCount.forEach(System.out::println);
+
+            printMostPopularPerformances(theatreService, ticketsCount);
+
+
+            System.out.println("\nPerfomances, in which tickets was purchased: \n");
+            List<PerfomanceName> purchasedPerfomance = theatreService.getPurchasedPerfomances(students);
+            purchasedPerfomance.forEach(System.out::println);
     }
+
 
     //Изменить форму вывода
     private static void printMostPopularPerformances(TheatreService theatreService, List<TicketCount> ticketsCount) {

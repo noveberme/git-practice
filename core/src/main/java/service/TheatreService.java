@@ -1,9 +1,9 @@
-package main.java.service;
+package service;
 
-import main.java.entities.Student;
-import main.java.entities.Perfomance;
-import main.java.entities.TicketCount;
-import main.java.enums.PerfomanceName;
+import entities.Student;
+import entities.Perfomance;
+import entities.TicketCount;
+import enums.PerfomanceName;
 
 import java.util.ArrayList;
 import java.util.Comparator;

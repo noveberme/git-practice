@@ -1,6 +1,8 @@
-package main.java.entities;
+package entities;
 
-import main.java.enums.PerfomanceName;
+//import main.java.enums.PerfomanceName;
+
+import enums.PerfomanceName;
 
 public class Perfomance {
     private PerfomanceName name;

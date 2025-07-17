@@ -1,4 +1,4 @@
-package main.java.enums;
+package enums;
 
 import java.util.List;
 
