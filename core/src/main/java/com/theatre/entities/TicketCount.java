@@ -1,6 +1,7 @@
-package main.java.entities;
+package com.theatre.entities;
 
-import main.java.enums.PerfomanceName;
+
+import com.theatre.enums.PerfomanceName;
 
 public class TicketCount {
     private PerfomanceName perfomanceName;

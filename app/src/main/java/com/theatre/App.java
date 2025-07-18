@@ -10,14 +10,16 @@
 • самый популярный спектакль (следует учесть вариант, что может быть несколько таких спектаклей);
 • спектакль (спектакли), на который решили приобрести билеты*/
 
-package main.java;
+package com.theatre;
+
+import com.theatre.entities.Perfomance;
+import com.theatre.entities.Student;
+import com.theatre.entities.TicketCount;
+import com.theatre.enums.PerfomanceName;
+import com.theatre.service.TheatreService;
 
 import java.util.List;
-import main.java.entities.Perfomance;
-import main.java.entities.Student;
-import main.java.entities.TicketCount;
-import main.java.enums.PerfomanceName;
-import main.java.service.TheatreService;
+
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
