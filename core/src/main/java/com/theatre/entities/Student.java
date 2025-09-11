@@ -1,6 +1,6 @@
-package main.java.entities;
+package com.theatre.entities;
 
-import main.java.enums.PerfomanceName;
+import com.theatre.enums.PerfomanceName;
 
 import java.util.ArrayList;
 import java.util.List;

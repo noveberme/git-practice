@@ -1,4 +1,4 @@
-package main.java.enums;
+package com.theatre.enums;
 
 import java.util.List;
 

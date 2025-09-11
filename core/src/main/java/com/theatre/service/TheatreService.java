@@ -1,9 +1,9 @@
-package main.java.service;
+package com.theatre.service;
 
-import main.java.entities.Student;
-import main.java.entities.Perfomance;
-import main.java.entities.TicketCount;
-import main.java.enums.PerfomanceName;
+import com.theatre.entities.Student;
+import com.theatre.entities.TicketCount;
+import com.theatre.entities.Perfomance;
+import com.theatre.enums.PerfomanceName;
 
 import java.util.ArrayList;
 import java.util.Comparator;
